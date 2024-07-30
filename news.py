@@ -1,7 +1,17 @@
 import requests
+import os
 import json
 import time
-from config import API_KEY
+# from config import API_KEY
+from dotenv import *
+
+# Load the .env file
+load_dotenv()
+
+# Retrieve the API key from environment variables
+API_KEY = os.getenv("api_key")
+
+config = dotenv_values(".env")
 
 def settings():
     # Get the current time
